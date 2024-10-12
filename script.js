@@ -1,11 +1,14 @@
 import  initializeCustomerScripts  from './customer.js';
 import  initializeUserScripts  from './user.js';
+import initializeTransactions from './transaction.js';
 import { handleLogout } from './login.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    
     const mainContent = document.getElementById('main-content');
     const loadCustomersLink = document.getElementById('load-customers');
     const loadUsersLink = document.getElementById('load-users');
+    const loadTransactionsLink = document.getElementById('load-transactions');
     const logout = document.getElementById('load-logout');
    
     // Function to load content into main content area
@@ -28,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         loadContent('./user.html', initializeUserScripts);
     });
+
+    loadTransactionsLink.addEventListener('click', (e) => {initializeTransactions(e)});
 
     logout.addEventListener('click', handleLogout);
 

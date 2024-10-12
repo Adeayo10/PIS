@@ -12,6 +12,7 @@ function initializeCustomerScripts() {
   const searchCustomer = document.getElementById("search-customer");
   const searchCustomerButton = document.getElementById("search-customer-btn");
 
+  
   // Handle search customer
   searchCustomerButton.addEventListener("click", () => searchForCustomer(searchCustomer, customerList));
 
